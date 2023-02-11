@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-STE25GZCV8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-STE25GZCV8");
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="refresh" content="15;URL=https://schoolmail.co.jp" />
+    <meta name="copyright" content="社団法人地域見守りネットワーク協議会" />
+    <title>
+      登下校メールシステム・無料連絡網システム |
+      一般社団法人地域見守りネットワーク協議会
+    </title>
+    <meta
+      name="description"
+      content="4人までメール配信対応。月額250円のみ。ICカードを使用した登下校メール送信システム・無料の連絡網システム(一斉メール配信)を各学校に無料で導入している地域見守りネットワーク協議会のウェブサイトです。学校・学童などに通うお子様の安全を守ります。"
+    />
+    <link rel="icon" type="image/png" href="./favicon.ico" />
+    <meta
+      name="keywords"
+      content="無料,連絡網,一斉メール配信,メーリングリスト,市区町村,自治体,小学校,中学校,学童,進学塾,教育委員会,登下校,連絡網,監視,通知,入校,下校,登校,先生,教頭,通学,安全,安心,危険,回避,無料,導入,システム,地域,警察,パトロール,ICカード,カードリーダー,設置,校内,インターネット,携帯電話,メール,保護者,親,子供,こども,スクール,タッチパネル"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img
+          src="./logo_text.png"
+          name="logo"
+          id="logo"
+          alt="地域見守りネットワーク協議会"
+        />
+      </h1>
+    </header>
+    <main>
+      <p>
+        地域見守りネットワーク協議会は、株式会社スクールメールサービスへ運営を委託しております。
+      </p>
+      <p>
+        <span id="remain_seconds">15</span
+        >秒後に自動で株式会社スクールメールサービスへと移動いたします。
+      </p>
+      <p>移動しない場合は<a href="https://schoolmail.co.jp">こちら</a>。</p>
+    </main>
+    <script>
+      try {
+        const el = document.getElementById("remain_seconds");
+        setInterval(() => {
+          let now = parseInt(el.innerText);
+          now--;
+          if (now <= 0) {
+            now = 0;
+            setTimeout(() => {
+              // location.href = "https://schoolmail.co.jp";
+            }, 1500);
+          }
+          el.innerText = now;
+        }, 1000);
+      } catch (e) {}
+    </script>
+  </body>
+</html>
