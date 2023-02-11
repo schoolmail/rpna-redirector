@@ -16,10 +16,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
-    <meta
-      http-equiv="refresh"
-      content="15;URL=https://staging-homepage.dev.schoolmail.co.jp"
-    />
+    <meta http-equiv="refresh" content="15;URL=https://schoolmail.co.jp" />
     <meta name="copyright" content="社団法人地域見守りネットワーク協議会" />
     <title>
       登下校メールシステム・無料連絡網システム |
@@ -56,11 +53,7 @@
         <span id="remain_seconds">15</span
         >秒後に自動で株式会社スクールメールサービスへと移動いたします。
       </p>
-      <p>
-        移動しない場合は<a href="https://staging-homepage.dev.schoolmail.co.jp"
-          >こちら</a
-        >。
-      </p>
+      <p>移動しない場合は<a href="https://schoolmail.co.jp">こちら</a>。</p>
     </main>
     <script>
       try {
@@ -71,7 +64,7 @@
           if (now <= 0) {
             now = 0;
             setTimeout(() => {
-              // location.href = "https://staging-homepage.dev.schoolmail.co.jp";
+              // location.href = "https://schoolmail.co.jp";
             }, 1500);
           }
           el.innerText = now;
